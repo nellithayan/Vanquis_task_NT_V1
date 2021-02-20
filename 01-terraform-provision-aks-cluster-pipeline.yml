@@ -104,7 +104,7 @@ stages:
                 commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(DEV_ENVIRONMENT)-$(Build.BuildId).out'
                 allowTelemetryCollection: false
 
-# Stage-2: Deploy Stages for QA
+# Stage-2: Deploy Stages for Dev & QA
 # Deployment-2: Deploy QA AKS Cluster
 ## Step-1: Download Secure File
 ## Step-2: Terraform Initialize (State Storage to store in Azure Storage Account)
