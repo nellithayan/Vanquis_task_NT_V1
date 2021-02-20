@@ -50,7 +50,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
     } 
    tags = {
       "nodepool-type"    = "system"
-      "environment"      = "dev"
+      "environment"      = "qa"
       "nodepoolos"       = "linux"
       "app"              = "system-apps" 
    } 
