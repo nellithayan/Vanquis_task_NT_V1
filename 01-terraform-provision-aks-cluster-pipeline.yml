@@ -83,7 +83,7 @@ stages:
                 backendType: 'azurerm'
                 backendServiceArm: 'terraform-aks-azurerm-svc-con'
                 backendAzureRmResourceGroupName: 'terraform-storage-rg'
-                backendAzureRmStorageAccountName: 'terraformstatexlrwdrzs'
+                backendAzureRmStorageAccountName: 'terraformstatexlrwdrzsnt'
                 backendAzureRmContainerName: 'tfstatefiles'
                 backendAzureRmKey: 'aks-$(DEV_ENVIRONMENT).tfstate'
                 allowTelemetryCollection: false
@@ -110,8 +110,6 @@ stages:
 ## Step-2: Terraform Initialize (State Storage to store in Azure Storage Account)
 ## Step-3: Terraform Plan 
 ## Step-4: Terraform Apply
-- stage: DeployAKSClusters
-  jobs:
     - deployment: DeployQAAKSCluster
       displayName: DeployQAAKSCluster
       pool:
@@ -134,7 +132,7 @@ stages:
                 backendType: 'azurerm'
                 backendServiceArm: 'terraform-aks-azurerm-svc-con'
                 backendAzureRmResourceGroupName: 'terraform-storage-rg'
-                backendAzureRmStorageAccountName: 'terraformstatexlrwdrzs'
+                backendAzureRmStorageAccountName: 'terraformstatexlrwdrzsnt'
                 backendAzureRmContainerName: 'tfstatefiles'
                 backendAzureRmKey: 'aks-$(QA_ENVIRONMENT).tfstate'
                 allowTelemetryCollection: false
