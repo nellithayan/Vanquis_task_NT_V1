@@ -51,8 +51,6 @@ stages:
           workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-manifests'
           allowTelemetryCollection: false
 
-<<<<<<< HEAD
-=======
 # Stage-2: Deploy Stages for Dev & QA
 # Deployment-1: Deploy Dev AKS Cluster
 ## Step-1: Define Variables for environments
@@ -105,7 +103,6 @@ stages:
                 environmentServiceName: 'terraform-aks-azurerm-svc-con'
                 commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(DEV_ENVIRONMENT)-$(Build.BuildId).out'
                 allowTelemetryCollection: false
->>>>>>> Adding TF pipeline file
 
 # Stage-2: Deploy Stages for Dev & QA
 # Deployment-2: Deploy QA AKS Cluster
